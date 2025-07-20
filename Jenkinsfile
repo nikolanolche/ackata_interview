@@ -30,7 +30,7 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/*.xml'
-            archiveArtifacts artifacts: 'target/surefire-reports/**/*.html', fingerprint: true
+            archiveArtifacts artifacts: 'target/surefire-reports/**/*.*', fingerprint: true
 
             publishHTML(target: [
                 reportName: 'TestNG HTML Report',
@@ -42,5 +42,6 @@ pipeline {
             ])
         }
     }
+
 
 }
