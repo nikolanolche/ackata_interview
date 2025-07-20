@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-20T00:25:24 CEST" name="MySuite" finished-at="2025-07-20T00:25:28 CEST" duration-ms="3783">
+    <groups>
+    </groups>
+    <test started-at="2025-07-20T00:25:24 CEST" name="Tests" finished-at="2025-07-20T00:25:28 CEST" duration-ms="3783">
+      <class name="api.books.BooksApiTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:api.books.BooksApiTest@327b636c]" started-at="2025-07-20T00:25:25 CEST" name="setup" finished-at="2025-07-20T00:25:25 CEST" duration-ms="924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_validateSchemaForAllBooks()[pri:0, instance:api.books.BooksApiTest@327b636c]" started-at="2025-07-20T00:25:25 CEST" name="test_validateSchemaForAllBooks" finished-at="2025-07-20T00:25:28 CEST" duration-ms="2474" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_validateSchemaForAllBooks -->
+        <test-method signature="test_createBook_validateResponse()[pri:0, instance:api.books.BooksApiTest@327b636c]" started-at="2025-07-20T00:25:25 CEST" name="test_createBook_validateResponse" finished-at="2025-07-20T00:25:28 CEST" duration-ms="2819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_createBook_validateResponse -->
+      </class> <!-- api.books.BooksApiTest -->
+      <class name="api.authors.AuthorsApiTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:api.authors.AuthorsApiTest@13acb0d1]" started-at="2025-07-20T00:25:25 CEST" name="setup" finished-at="2025-07-20T00:25:25 CEST" duration-ms="925" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="test_validateSchemaForAllAuthors()[pri:0, instance:api.authors.AuthorsApiTest@13acb0d1]" started-at="2025-07-20T00:25:25 CEST" name="test_validateSchemaForAllAuthors" finished-at="2025-07-20T00:25:28 CEST" duration-ms="2698" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_validateSchemaForAllAuthors -->
+      </class> <!-- api.authors.AuthorsApiTest -->
+    </test> <!-- Tests -->
+  </suite> <!-- MySuite -->
+</testng-results>

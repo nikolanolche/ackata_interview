@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MySuite" parallel="methods" thread-count="5">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+    </listeners>
+    <test name="Tests">
+        <classes>
+            <class name="api.authors.AuthorsApiTest"/>
+            <class name="api.books.BooksApiTest"/>
+        </classes>
+    </test>
+</suite>
+
