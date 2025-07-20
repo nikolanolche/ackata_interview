@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_TAG = "api-tests:${env.BUILD_NUMBER}"
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -14,13 +10,14 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh "docker build -t ${IMAGE_TAG} ."
+                sh 'docker build -t api-tests:latest .'
             }
         }
 
         stage('Run Tests in Docker') {
             steps {
-                sh "docker run --rm -v \$WORKSPACE:/app ${IMAGE_TAG} mvn test"
+                 sh 'docker run --rm -v $WORKSPACE:/app api-tests:latest mvn test'
+
             }
         }
 
@@ -36,7 +33,6 @@ pipeline {
             junit 'target/surefire-reports/*.xml'
             archiveArtifacts artifacts: 'target/surefire-reports/**/*.*', fingerprint: true
 
-            // Cleanup dangling images to avoid disk bloat
             sh 'docker image prune -f || true'
 
             publishHTML(target: [
