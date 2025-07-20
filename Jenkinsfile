@@ -30,6 +30,17 @@ pipeline {
     post {
         always {
             junit 'target/surefire-reports/*.xml'
+            archiveArtifacts artifacts: 'target/surefire-reports/**/*.html', fingerprint: true
+
+            publishHTML(target: [
+                reportName: 'TestNG HTML Report',
+                reportDir: 'target/surefire-reports',
+                reportFiles: 'index.html',
+                keepAll: true,
+                alwaysLinkToLastBuild: true,
+                allowMissing: false
+            ])
         }
     }
+
 }
